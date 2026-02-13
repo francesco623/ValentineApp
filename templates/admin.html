@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Admin | Valentine's day app</title>
+{% endblock %}
+
+{% block body %}
+<div class="admincontent">
+    <h1 class="admin-title">Add a New Reason</h1>
+    <form class="admin-form" action="/admin" method="POST">
+        <input type="text" name="reason" id="reason" placeholder="Write a lovely reason..." required>
+        <input type="submit" value="Add reason">
+    </form>
+    <a class="admin-link" href="/">Back to random reason</a>
+</div>
+{% endblock %}

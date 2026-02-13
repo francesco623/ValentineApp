@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Valentine's day app</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 class="hero-title">Reasons Why I Love My Wife</h1>
+    <p class="subtitle">One sweet reminder at a time.</p>
+
+    <section class="reason-card">
+        {% if reason %}
+        <p class="reason-text">{{ reason.content }}</p>
+        {% else %}
+        <p class="empty-message">No reasons available yet. Add one from the admin page.</p>
+        {% endif %}
+    </section>
+
+    <div class="actions">
+        <form action="/">
+            <input type="submit" value="Show another reason">
+        </form>
+        {% if reason %}
+        <a class="link-btn delete" href="/delete/{{ reason.id }}">Delete this reason</a>
+        {% endif %}
+    </div>
+
+    <a class="admin-link" href="/admin">Open admin</a>
+</div>
+{% endblock %}
