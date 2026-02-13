@@ -6,7 +6,20 @@
 
 {% block body %}
 <div class="admincontent">
-    <h1 class="admin-title">Add a New Reason</h1>
+    <div class="decor-hearts" aria-hidden="true">
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+    </div>
+
+    <h1 class="admin-title">
+        <span class="script-title">Love Notes</span>
+        Add a New Reason
+    </h1>
+    <p class="subtitle">Write a new reason and keep the list growing.</p>
+
     <form class="admin-form" action="/admin" method="POST">
         <input type="text" name="reason" id="reason" placeholder="Write a lovely reason..." required>
         <input type="submit" value="Add reason">

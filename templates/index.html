@@ -6,8 +6,19 @@
 
 {% block body %}
 <div class="content">
-    <h1 class="hero-title">Reasons Why I Love My Wife</h1>
-    <p class="subtitle">One sweet reminder at a time.</p>
+    <div class="decor-hearts" aria-hidden="true">
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+    </div>
+
+    <h1 class="hero-title">
+        <span class="script-title">For My Love</span>
+        Reasons Why I Love My Wife
+    </h1>
+
 
     <section class="reason-card">
         {% if reason %}
@@ -21,11 +32,11 @@
         <form action="/">
             <input type="submit" value="Show another reason">
         </form>
-        {% if reason %}
+        <!-- {% if reason %}
         <a class="link-btn delete" href="/delete/{{ reason.id }}">Delete this reason</a>
-        {% endif %}
+        {% endif %} -->
     </div>
 
-    <a class="admin-link" href="/admin">Open admin</a>
+    <!-- <a class="admin-link" href="/admin">Open admin</a> -->
 </div>
 {% endblock %}
